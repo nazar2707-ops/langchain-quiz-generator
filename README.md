@@ -1,39 +1,117 @@
-# Python AI Portfolio
+# EGE Quiz Generator Bot 🎓
 
-A small Python project demonstrating use of Google Gemini via LangChain wrappers to build AI-powered portfolio utilities.
+A Telegram bot for preparing for the Russian Unified State Examination (EGE) with real questions across all subjects.
 
-## Features
-- Loads environment variables from `.env`
-- Uses `langchain_google_genai` to interact with Gemini models
-- Simple example script at `portfolio.py`
+## 🎯 Features
 
-## Requirements
-- Python 3.9+
-- A Google Gemini API key
-- Recommended virtual environment
+- 📚 **55 Real EGE Questions** across 11 subjects
+- 🤖 **AI-Generated Answers** via Google Gemini API
+- 💬 **Telegram Interface** with interactive buttons
+- ✅ **Answer Verification** with detailed explanations
+- 🎲 **Random Question Selection** for variety
 
-## Installation
-1. Clone the repo
-2. Create and activate a virtual environment:
-   python -m venv .venv
-   source .venv/bin/activate  # macOS/Linux
-   .venv\Scripts\activate     # Windows
+## 📖 Subjects
+
+1. Russian Language
+2. Mathematics
+3. Physics
+4. Chemistry
+5. Biology
+6. History
+7. Social Studies
+8. Literature
+9. Computer Science
+10. Geography
+11. English Language
+
+## 🚀 Quick Start
+
+### Requirements
+- Python 3.8+
+- pip
+- Google Gemini API key
+- Telegram Bot Token
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/nazar2707-ops/langchain-quiz-generator.git
+cd langchain-quiz-generator
+```
+
+2. Create and activate virtual environment:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
 3. Install dependencies:
-   pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
 
-## Configuration
-Create a `.env` file at the project root:
-GEMINI_API_KEY=your_gemini_api_key_here
+4. Create `.env` file:GEMINI_API_KEY=your_google_gemini_key
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 
-## Usage
-Example (from `portfolio.py`):
-```python
-from dotenv import load_dotenv
-import os
-from langchain_google_genai import ChatGoogleGenerativeAI
+5. Run the bot:
+```bash
+python3 telegram_bot_with_data.py
+```
 
-load_dotenv()
-api_key = os.getenv("GEMINI_API_KEY")
+## 🛠 Technologies
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", api_key=api_key)
-print("LLM initialized successfully!")
+- **Python 3.13** — Main language
+- **LangChain** — LLM framework
+- **Google Gemini API** — Answer generation
+- **python-telegram-bot** — Telegram integration
+- **JSON** — Question storage
+
+## 📁 Project Structure:
+├── telegram_bot_with_data.py # Main bot
+├── ege_questions_generated.json # 55 EGE questions
+├── .env # Environment variables
+├── requirements.txt # Dependencies
+├── README.md # Russian documentation
+└── README.en.md # English documentation
+
+
+## 💡 How to Use
+
+1. Find the bot in Telegram (@nazar_quiz_generator_bot)
+2. Send `/start`
+3. Choose a subject from the list
+4. Answer the question by clicking one of the options
+5. Get the result with detailed explanation
+6. Move to next question or choose another subject
+
+## 📊 Question Examples
+
+**Russian Language:** Grammar, punctuation, spelling
+**Mathematics:** Equations, geometry, inequalities
+**Physics:** Laws, units, formulas
+**History:** Dates, events, historical facts
+**And many more...**
+
+## 🎓 Portfolio Value
+
+This project demonstrates:
+- ✅ Working with AI APIs (Google Gemini)
+- ✅ Telegram bot development
+- ✅ LangChain LLM integration
+- ✅ Bot state management
+- ✅ JSON data handling
+- ✅ Git and GitHub workflow
+
+## 📝 License
+
+MIT License
+
+## 👨‍💻 Author
+
+Nazar Seitkuliev
+- GitHub: [@nazar2707-ops](https://github.com/nazar2707-ops)
+
+## 📧 Contact
+
+For questions or suggestions — use GitHub Issues.
